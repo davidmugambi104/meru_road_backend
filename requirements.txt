@@ -4,3 +4,5 @@ Flask-Marshmallow
 Flask-JWT-Extended
 Flask-Migrate
 gunicorn
+Flask-CORS==4.0.0
+
