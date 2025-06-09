@@ -3,13 +3,14 @@ from flask_migrate import Migrate
 from models import db, Road, Contractor, Milestone, Photo, User, Notification, RoadStats,AccessibilitySetting
 from utils import sort_and_search_roads, calculate_road_stats, format_currency, format_date
 from datetime import datetime
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'meru_roads.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
+CORS(app)
 db.init_app(app)
 migrate = Migrate(app, db)
 
