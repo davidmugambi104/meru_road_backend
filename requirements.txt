@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 Flask-Marshmallow
 Flask-JWT-Extended
 Flask-Migrate
+gunicorn
